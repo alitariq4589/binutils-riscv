@@ -52,7 +52,7 @@ jobs:
           git config --global core.compression 0
 
           rm -rf binutils-gdb installed_binaries
-          git clone --depth=1 --no-tags git clone git://sourceware.org/git/binutils-gdb.git
+          git clone --depth=1 --no-tags git://sourceware.org/git/binutils-gdb.git
           cd binutils-gdb
 
           # Fetch only tag references (without full history)
