@@ -94,7 +94,7 @@ jobs:
       - name: Get binutils version and set outputs
         id: get-version
         run: |
-          BINUTILS_VERSION=$($GITHUB_WORKSPACE/installed_binaries/bin/as --version | head -n1 | awk '{print 5}')
+          BINUTILS_VERSION="$($GITHUB_WORKSPACE/installed_binaries/bin/as --version | head -n1 | awk '{print $5}')"
           ASSET_NAME="binutils-${BINUTILS_VERSION}-riscv64-linux.tar.gz"
           ASSET_PATH="$GITHUB_WORKSPACE/${ASSET_NAME}"
 
